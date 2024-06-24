@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            font-size: 20px;
+        }
+        .social-icons a:hover {
+            color: #666;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+    <script>
+        function openTab(tabName) {
+            var i;
+            var tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Britz Construction</h1>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </header>
+    <nav>
+        <a href="#" onclick="openTab('about')">About</a>
+        <a href="#" onclick="openTab('services')">Services</a>
+        <a href="#" onclick="openTab('contact')">Contact</a>
+        <a href="#" onclick="openTab('gallery')">Gallery</a>
+    </nav>
+    <div class="content">
+        <div id="about" class="tab-content active">
+            <h2>About Us</h2>
+            <p>This is the about section of our website. We provide various services to our clients...</p>
+        </div>
+        <div id="services" class="tab-content">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+                <!-- Add more services as needed -->
+            </ul>
+        </div>
+        <div id="contact" class="tab-content">
+            <h2>Contact Us</h2>
+            <p>Address: 123 Main Street, City, Country</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div id="gallery" class="tab-content">
+            <h2>Gallery</h2>
+            <img src="gallery-image1.jpg" alt="Gallery Image 1" width="300">
+            <img src="gallery-image2.jpg" alt="Gallery Image 2" width="300">
+            <img src="gallery-image3.jpg" alt="Gallery Image 3" width="300">
+            <!-- Add more gallery images as needed -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
